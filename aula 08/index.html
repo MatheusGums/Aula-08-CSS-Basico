@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao CSS</title>
+    
+    <style>
+        body {
+        color: rgb(253, 180, 96);
+      
+        }
+        #titulo-principal{ /* Ganha de "."" em especificidade (id) */
+            color: rgb(36, 114, 179); 
+        }
+
+        .primeira-classe { /* Ganha da ordem porque é mais específico*/
+            color: purple; 
+        }
+        
+        .primeira-classe {
+            color: rgb(0, 255, 128);
+        }
+        h1  {/*só falar o "h1" nao tem nenhuma especificidade entao é o com menor "importancia"*/
+            color: rgb(160, 96, 219) !important;  /* !important é o mais "importante" entao ele checa
+             sempre esse primeiro e ignora o resto*/
+        }
+        
+    </style>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <h1 id="titulo-principal" class="primeira-classe">Introdução ao CSS!</h1>
+    <h2 style="color:rgb(0, 255, 128); font-size: 42px;" >Texto</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque laborum aliquam expedita nam enim esse magnam soluta vitae. Neque animi consequuntur exercitationem? Ipsum quasi, alias aliquam nihil quisquam nam tempore.</p>
+</body>
+
+</html>
